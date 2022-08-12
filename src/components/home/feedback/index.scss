@@ -1,0 +1,106 @@
+@import '../var';
+
+.feed {
+    margin-top: 30px;
+    &__info {
+        display: block;
+        font-size: 18px;
+        color: $green;
+        margin-bottom: 20px;
+    }
+    &__form {
+        margin-top: 30px;
+        
+    }
+}
+
+form {
+    label {
+        display: block;
+        margin-bottom: 20px;
+        select,
+        textarea,
+        input {
+            display: block;
+            padding: 16px 20px;
+            width: 100%;
+            border:1px solid #EAEAF0;
+            margin-top: 8px;
+            &[type=file]{
+                padding: 12px 20px;
+            }
+            &:focus {
+                outline-color: $blue;
+            }
+        }
+        textarea {
+            height: 149px;
+            resize: none;
+        }
+    }
+    button[type='submit'] {
+        background-color: $blue;
+        color: #fff;
+        padding: 13px 0px;
+        text-align: center;
+        border-radius: 5px;
+        font-weight: 700;
+        border:0;
+        display: block;
+        width: 100%;
+    }
+    .filtr__radio{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        & input{
+            margin-right: 10px;
+        }
+    }
+}
+
+@media (max-width:767px){
+    button{
+        margin-bottom: 20px
+    }
+    .col-sm-6 {
+        @include fb(50%);
+        padding: 0px 10px;
+    }
+    .col-sm-5 {
+        @include fb(41.67%);
+        padding: 0px 10px;
+    }
+    .col-sm-7 {
+        @include fb(58.33%);
+        padding: 0px 10px;
+    }
+    .col-sm-4 {
+        @include fb(33.33%);
+        padding: 0px 10px;
+    }
+    .col-sm-8 {
+        @include fb(66.66%);
+        padding: 0px 10px;
+    }
+    .col-sm-3 {
+        @include fb(25%);
+        padding: 0px 10px;
+    }
+    .col-sm-9 {
+        @include fb(75%);
+        padding: 0px 10px;
+    }
+    .col-sm-12{
+        @include fb(90%);
+        padding: 0px 10px;
+    }
+    .sm-order-1 {
+        order:1;
+    }
+    .sm-order-2 {
+        order:2;
+    }
+}

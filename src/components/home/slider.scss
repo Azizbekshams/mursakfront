@@ -1,0 +1,133 @@
+.splide__pagination{
+    flex-wrap: nowrap;
+    li {
+        flex-basis: 100%;
+        display: flex;
+        padding: 2px;
+        button {
+            max-width: 100%;
+            display: block;
+            flex-basis: 100%;
+            margin: 0;
+            width: 100%;
+            border-radius: 2px;
+            height: 3px;
+            background-color: #C8CACB;
+            position: relative;
+            opacity: 0.7;
+            &.is-active {
+                background-color: #EDF2F6;
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    }
+}
+.slider {
+    &__slide {
+        height: 524px;
+        position: relative;
+        // overflow: hidden;   
+        img {
+            max-height: 100%;
+            width: 100%;
+        }
+    }
+    margin-bottom: 80px;
+    border-radius: 8px;
+    overflow: hidden;
+    &__text {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 110px 100px;
+        color: #fff;
+        background-color: rgba(0,0,0,0.3);
+    }
+    &__title {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        max-width: 50%;
+    }
+    &__info {
+        font-size: 32px;
+        font-weight: 500;
+    }
+}
+
+
+
+.aboutme{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    margin: 110px;
+    
+   
+    .imgavatar{
+        margin-right: 60px;
+        width: 200px;
+        img{
+            border-radius: 50%;
+        }
+    }
+    .textme{
+        font-size: 18px;
+        font-family:'Lucida Handwriting';
+        width: 700px;
+        
+    }
+}
+
+// 
+
+@media (max-width:1024px){
+    .splide__slide {
+        img {
+            width: 100%;
+        }
+    }
+}
+@media (max-width:767px){
+   
+    .aboutme{
+    
+        margin: 0;
+        .imgavatar{
+            margin: 0;
+        }
+        .textme{
+           
+            font-size: 12px;
+            padding: 10px;
+        }
+    }
+    .slider {
+        
+        &__text {
+            
+        
+            padding-top: 100px;
+            padding-left: 100px;
+        }
+        &__title {
+            font-size: 18px;
+            margin: 0;
+        }
+        &__info {
+            margin: 0;
+            font-size: 16px;
+        }
+        margin-bottom: 50px;
+        &__slide{
+            height: 212px;
+        }
+    }
+    
+}
